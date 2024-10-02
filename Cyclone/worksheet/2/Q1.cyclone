@@ -1,0 +1,20 @@
+machine M {
+      abstract start state  q1{} 
+      abstract final state  q2{} 
+      
+      abstract state q3{}
+      transition  t1 { q1->q1  on "0" } 
+      transition  t3 { q1->q2  on "1" } 
+      transition  t4 { q2->q2  on "1" } 
+      transition  t5 { q2->q3  on "0" } 
+      transition  t6 { q3->q3  on "0" } 
+      transition  t7 { q3->q2  on "1" } 
+
+   
+      /* 
+       * Goal: find all strings with length of 5.
+       */  
+     goal{ 
+         enumerate for 5
+         }
+    } 

@@ -1,0 +1,22 @@
+machine M
+
+{
+abstract start node A1{}
+abstract final node A2{}
+abstract node A3{}
+abstract node A4{}
+
+
+ edge t1 { A1 -> A2 }
+ edge t2 { A1 -> A4 }
+ edge t3 { A2 -> A3 }
+ edge t4 { A2 -> A2 }
+ edge t5 { A3 -> A2 }
+ edge t6 { A3 -> A3 }
+ edge t7 { A4 -> A4 }
+
+goal
+{
+enumerate for 6
+}
+}

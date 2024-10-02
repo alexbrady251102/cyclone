@@ -1,0 +1,25 @@
+machine M
+{
+abstract node A{}
+abstract node B{}
+abstract node C{}
+abstract start node D{}
+abstract node E{}
+abstract node F{}
+
+edge t1 {D -> B}
+edge t2 {B -> E}
+edge t3 {C -> D}
+edge t4 {C -> B}
+edge t5 {D -> F}
+edge t6 {F -> A}
+edge t7 {B -> A}
+edge t8 {E -> C}
+edge t9 {A -> C}
+
+goal
+{
+enumerate for 9 condition ((A -> C)^{1} && (B -> A)^{1} && (B -> E)^{1} && (C -> D)^{1} && (C -> B)^{1} && (D -> B)^{1} && (D -> F)^{1} && (E -> C)^{1}&& (F -> A)^{1}) reach (A,B,C,D,E,F)
+
+}
+}
